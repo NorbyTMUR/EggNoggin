@@ -52,18 +52,37 @@ h1{
 
 .cards {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 16px;
   padding: 10px;
 }
 
+.cards .card1 {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
 .cards_horizontal_img {
-  width: 70%;
+  width: 100%;
   height: auto;
 }
 
 .cards_horiz {
-  padding: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px;
   padding-bottom: 10px;
+}
+
+.cards_horiz .card1 {
+  box-sizing: border-box;
+  flex: 0 1 220px;
+  width: 220px;
+  padding: 8px;
+  font-size: 18px;
 }
 
 .cards div {
